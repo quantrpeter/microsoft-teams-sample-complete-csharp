@@ -1,8 +1,8 @@
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "1.7",
   "version": "1.5",
-  "id": "<<REGISTERED_BOT_ID>>",
+  "id": "5d704f49-9c54-4193-92cb-f0fdb39577bd",
   "packageName": "com.skype.teams.samples.sampleapp",
   "developer": {
     "name": "Microsoft",
@@ -24,8 +24,8 @@
   },
   "accentColor": "#3F487F",
   "staticTabs": [
-      {
-      "contentUrl": "<<BASE_URI>>/public/tab/tabConfig/tab.aspx",
+    {
+      "contentUrl": "https://85ef843cbb20.ngrok.io/public/tab/tabConfig/tab.aspx",
       "entityId": "statictab",
       "name": "Bot Info",
       "scopes": [
@@ -36,16 +36,18 @@
   ],
   "configurableTabs": [
     {
-      "configurationUrl": "<<BASE_URI>>/public/tab/tabConfig/index.html",
+      "configurationUrl": "https://85ef843cbb20.ngrok.io/public/tab/tabConfig/index.html",
       "canUpdateConfiguration": false,
-       "scopes": [ "team", "groupchat" ]
+      "scopes": [ "team", "groupchat" ]
     }
   ],
   "bots": [
     {
-      "botId": "<<REGISTERED_BOT_ID>>",
+      "botId": "5d704f49-9c54-4193-92cb-f0fdb39577bd",
       "isNotificationOnly": false,
       "scopes": [ "team", "personal", "groupchat" ],
+      "supportsCalling": true,
+      "supportsVideo": true,
       "commandLists": [
         {
           "scopes": [
@@ -146,7 +148,7 @@
   ],
   "composeExtensions": [
     {
-      "botId": "<<REGISTERED_BOT_ID>>",
+      "botId": "5d704f49-9c54-4193-92cb-f0fdb39577bd",
       "canUpdateConfiguration": true,
       "commands": [
         {
@@ -170,6 +172,6 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "<<BASE_URI_DOMAIN>>"
+    "85ef843cbb20.ngrok.io"
   ]
 }

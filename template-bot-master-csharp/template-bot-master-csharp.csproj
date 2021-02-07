@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="composeExtensionSettings.html" />
+    <Content Include="Content\Site.css" />
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
     <Content Include="manifest\bot_blue.png" />
@@ -183,6 +184,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="middleware\AdaptiveCardSubmitActionHandler.cs" />
+    <Compile Include="src\controllers\CallsController.cs" />
     <Compile Include="src\dialogs\examples\basic\AdaptiveCardDialog.cs" />
     <Compile Include="src\dialogs\examples\teams\FetchTeamsInfoDialog.cs" />
     <Compile Include="src\dialogs\examples\teams\UpdateCardMsgSetupDialog.cs" />
@@ -247,6 +249,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="manifest\manifest.json" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -260,7 +266,11 @@
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
+    <Folder Include="Views\Calls\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
